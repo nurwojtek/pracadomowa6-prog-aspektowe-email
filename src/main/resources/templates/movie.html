@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+</head>
+<body>
+<h1>Movies</h1>
+
+<div >
+    <table class="pure-table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="movie: ${movieList}">
+            <td th:text="${movie.getTitle()}  " ></td>
+            <td th:text="${movie.getYear()}  "></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form class="pure-form" th:action="@{/movies}" th:object="${newMovie}" method="post">
+        <td> <input type="text" th:field="*{title}" placeholder="title" ></td>
+        <td> <input type="text" th:field="*{year}" placeholder="year" ></td>
+        <td> <button class="pure-button pure-button-primary">add Movie</button></td>
+    </form>
+
+</div>
+
+
+
+
+</body>
+</html>
