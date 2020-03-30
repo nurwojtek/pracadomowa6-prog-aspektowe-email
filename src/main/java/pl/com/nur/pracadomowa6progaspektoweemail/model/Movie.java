@@ -1,8 +1,8 @@
 package pl.com.nur.pracadomowa6progaspektoweemail.model;
 
 public class Movie {
-    String title;
-    int year;
+    private String title;
+    private int year;
 
 
     public Movie() {

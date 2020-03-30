@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class MoviesList {
 
-    List<Movie> movieList;
+    private List<Movie> movieList;
 
     public MoviesList() {
         movieList = new ArrayList();

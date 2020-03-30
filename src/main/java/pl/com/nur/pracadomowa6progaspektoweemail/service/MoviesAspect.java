@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MoviesAspect {
 
-    MailService mailService;
+    private MailService mailService;
 
     public MoviesAspect(MailService mailService) {
         this.mailService = mailService;

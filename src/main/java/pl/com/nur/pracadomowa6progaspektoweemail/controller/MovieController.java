@@ -14,7 +14,7 @@ import pl.com.nur.pracadomowa6progaspektoweemail.service.MoviesList;
 @RequestMapping("/movies")
 public class MovieController {
 
-    MoviesList moviesList;
+    private MoviesList moviesList;
 
     public MovieController(MoviesList moviesList) {
         this.moviesList = moviesList;
